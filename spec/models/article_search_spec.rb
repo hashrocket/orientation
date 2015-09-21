@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe Article do
   describe ".text_search" do
-    before { 100.times { create :article } }
+    before(:all) { 100.times { create :article } }
 
     let!(:article) { create :article, title: "Pumpernickel Stew", content: "Yum!"}
 
